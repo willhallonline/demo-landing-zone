@@ -40,8 +40,5 @@ module "organization_accounts" {
   create_iam_role   = true
   role_name         = var.role_name
 
-  tags = {
-    Environment = each.key
-    Managed     = "Terraform"
-  }
+  tags = var.tags
 }

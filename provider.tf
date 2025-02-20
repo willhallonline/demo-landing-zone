@@ -1,5 +1,8 @@
 provider "aws" {
-  region     = var.aws_region
-  access_key = var.aws_access_key
-  secret_key = var.aws_secret_key
+  region = var.region
+  
+  # Assume role for organization management
+  assume_role {
+    role_arn = "arn:aws:iam::${var.management_account_id}:role/OrganizationAccountAccessRole"
+  }
 }
