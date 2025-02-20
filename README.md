@@ -1,5 +1,7 @@
 # demo-landing-zone
 
+![Terraform CI/CD](https://github.com/<your-username>/demo-landing-zone/actions/workflows/terraform.yml/badge.svg)
+
 This project sets up a landing zone for an AWS organization using Terraform. It includes configurations for both development and production environments, as well as reusable modules for managing AWS accounts, organizations, and networking.
 
 ## Project Structure
