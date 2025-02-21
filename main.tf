@@ -13,7 +13,7 @@ module "accounts" {
   source     = "terraform-aws-modules/organizations/aws//modules/accounts"
   depends_on = [module.organization]
 
-  for_each = local.accounts
+  for_each = local.organizational_units
 
   name      = each.value.name
   email     = each.value.email
