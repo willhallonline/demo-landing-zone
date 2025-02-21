@@ -19,21 +19,3 @@ module "accounts" {
   email     = each.value.email
   parent_id = module.organization.organizational_units[each.key].id
 }
-
-module "network" {
-  source = "terraform-aws-modules/vpc/aws"
-
-  for_each = local.vpcs
-
-  name = each.key
-  cidr = each.value.cidr
-  azs  = each.value.azs
-
-  private_subnets = each.value.private_subnets
-  public_subnets  = each.value.public_subnets
-
-  enable_nat_gateway = true
-  single_nat_gateway = true
-
-  tags = local.tags
-}
