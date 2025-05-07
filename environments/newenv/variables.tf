@@ -1,0 +1,1 @@
+// Variables for newenv environment
